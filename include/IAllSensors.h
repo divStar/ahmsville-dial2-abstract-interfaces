@@ -1,6 +1,7 @@
 #ifndef DIALER_IALLSENSORS_H
 #define DIALER_IALLSENSORS_H
 
+#include "Callbacks.h"
 #include "ICapacitiveSensorAdapter.h"
 #include "IHapticSensorAdapter.h"
 #include "IMacroKeys.h"
@@ -12,7 +13,7 @@ public:
   /**
    * @brief Creates the sensor adapters depending on the concrete implementation.
    */
-  virtual void createSensorAdapters() = 0;
+  virtual void createSensorAdapters(const Callbacks::MacroKeyCallbackType *macroKeyChangeHandler) = 0;
 
   /**
    * @return (IMacroKeys) returns the macro keys sensor adapter

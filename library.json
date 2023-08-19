@@ -2,7 +2,7 @@
   "name": "Dial2AbstractSensors",
   "keywords": "dial2, sensors, abstract, interfaces",
   "description": "A simple library containing abstract interfaces for sensor adapters for the AhmsVille Dial 2",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": {
     "name": "Igor Voronin",
     "url": "https://github.com/divStar"
@@ -14,7 +14,6 @@
   "export": {
     "exclude": [
       ".pio",
-      "cmake-build-*",
       "platformio.ini"
     ]
   },
