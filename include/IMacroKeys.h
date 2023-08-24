@@ -1,6 +1,8 @@
 #ifndef DIALER_IMACROKEYS_H
 #define DIALER_IMACROKEYS_H
 
+namespace AbstractSensors {
+
 /**
  * @class   IMacroKeys
  * @brief   Interface to decouple the actual macro key adapter-interfaces from the task
@@ -11,6 +13,9 @@
  */
 class IMacroKeys {
 public:
+  /**
+   * @brief Destructor.
+   */
   virtual ~IMacroKeys() = default;
 
   /**
@@ -18,5 +23,7 @@ public:
    */
   virtual void initializeMacroKeys() = 0;
 };
+
+} // namespace AbstractSensors
 
 #endif // DIALER_IMACROKEYS_H

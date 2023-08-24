@@ -1,7 +1,13 @@
 #ifndef DIALER_ISPACENAVIGATORSENSORADAPTER_H
 #define DIALER_ISPACENAVIGATORSENSORADAPTER_H
 
+#ifdef ARDUINO
+#include <stdint.h>
+#else
 #include <cstdint>
+#endif
+
+namespace AbstractSensors {
 
 /**
  * @class   ISpaceNavigatorSensorAdapter
@@ -16,6 +22,9 @@
  */
 class ISpaceNavigatorSensorAdapter {
 public:
+  /**
+   * @brief Destructor.
+   */
   virtual ~ISpaceNavigatorSensorAdapter() = default;
 
   /**
@@ -55,5 +64,7 @@ public:
    */
   virtual bool isDmpInitDone() = 0;
 };
+
+} // namespace AbstractSensors
 
 #endif // DIALER_ISPACENAVIGATORSENSORADAPTER_H

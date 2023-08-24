@@ -11,6 +11,7 @@ CMakeListsPrivate.txt
 
 # Ignore Doxygen output directory
 docs
+public
 
 # Ignore compiled and linked binaries
 *.o

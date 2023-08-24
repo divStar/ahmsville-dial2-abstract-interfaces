@@ -1,7 +1,13 @@
 #ifndef DIALER_ICAPACITIVESENSORADAPTER_H
 #define DIALER_ICAPACITIVESENSORADAPTER_H
 
+#ifdef ARDUINO
+#include <stdint.h>
+#else
 #include <cstdint>
+#endif
+
+namespace AbstractSensors {
 
 /**
  * @class   ICapacitiveSensorAdapter
@@ -16,6 +22,9 @@
  */
 class ICapacitiveSensorAdapter {
 public:
+  /**
+   * @brief Destructor.
+   */
   virtual ~ICapacitiveSensorAdapter() = default;
 
   /**
@@ -33,5 +42,7 @@ public:
    */
   virtual long capacitiveSensor(uint8_t samples) = 0;
 };
+
+} // namespace AbstractSensors
 
 #endif // DIALER_ICAPACITIVESENSORADAPTER_H

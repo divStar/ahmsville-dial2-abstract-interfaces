@@ -1,6 +1,14 @@
 #ifndef DIALER_IHAPTICSENSORADAPTER_H
 #define DIALER_IHAPTICSENSORADAPTER_H
 
+#ifdef ARDUINO
+#include <stdint.h>
+#else
+#include <cstdint>
+#endif
+
+namespace AbstractSensors {
+
 /**
  * @class   IHapticSensorAdapter
  * @brief   Interface to decouple the actual haptic sensor from the task
@@ -14,6 +22,9 @@
  */
 class IHapticSensorAdapter {
 public:
+  /**
+   * @brief Destructor.
+   */
   virtual ~IHapticSensorAdapter() = default;
 
   /**
@@ -24,5 +35,7 @@ public:
    */
   virtual void writeStrength(uint8_t strength) = 0;
 };
+
+} // namespace AbstractSensors
 
 #endif // DIALER_IHAPTICSENSORADAPTER_H

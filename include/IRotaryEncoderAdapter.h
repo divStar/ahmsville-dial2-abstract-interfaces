@@ -1,6 +1,8 @@
 #ifndef DIALER_IROTARYENCODERADAPTER_H
 #define DIALER_IROTARYENCODERADAPTER_H
 
+namespace AbstractSensors {
+
 /**
  * @class   IRotaryEncoderAdapter
  * @brief   Interface to decouple the actual rotary encoder adapter-interfaces from the
@@ -14,6 +16,9 @@
  */
 class IRotaryEncoderAdapter {
 public:
+  /**
+   * @brief Destructor.
+   */
   virtual ~IRotaryEncoderAdapter() = default;
 
   /**
@@ -27,5 +32,7 @@ public:
    */
   [[nodiscard]] virtual float getRotationAngleDelta() const = 0;
 };
+
+} // namespace AbstractSensors
 
 #endif // DIALER_IROTARYENCODERADAPTER_H
