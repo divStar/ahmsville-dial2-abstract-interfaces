@@ -11,7 +11,7 @@
     "type": "git",
     "url": "https://github.com/divStar/ahmsville-dial2-abstract-sensors.git"
   },
-  "logo": "./misc/ahmsville_dial2_logo.png",
+  "logo": "./doxy-misc/ahmsville_dial2_logo.png",
   "export": {
     "exclude": [
       ".idea",
