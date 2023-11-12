@@ -1,0 +1,60 @@
+#projectlogo {
+    padding: 0.5em;
+}
+
+.dropdown-container {
+    border: 1px solid var(--search-filter-border-color);
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    border-radius: 0.65em;
+    box-shadow: var(--search-box-shadow);
+}
+
+.dropdown-display, .option {
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    background-image: var(--nav-gradient-image);
+}
+
+.dropdown-display:hover, .option:hover {
+    background-image: var(--nav-gradient-hover-image);
+}
+
+.dropdown-display {
+    border-radius: 0.65em;
+}
+
+.dropdown-options .option:first-child {
+    border-top-left-radius: 0.65em;
+    border-top-right-radius: 0.65em;
+}
+
+.dropdown-options .option:last-child {
+    border-bottom-left-radius: 0.65em;
+    border-bottom-right-radius: 0.65em;
+}
+
+.hint, .display-hint {
+    width: 1.5em;
+    height: 1.5em;
+    margin-left: 0.25em;
+    margin-right: 0.25em;
+}
+
+.dropdown-options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    border: 1px solid var(--search-filter-border-color);
+    border-radius: 0.65em;
+    white-space: nowrap;
+    z-index: 10000;
+    background-color: var(--search-background-color);
+}
